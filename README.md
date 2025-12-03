@@ -1,4 +1,4 @@
-# my-gh-apps
+# github-app-tools
 
 Tools and utilities for creating and managing GitHub Apps using the manifest flow.
 
@@ -21,12 +21,12 @@ Create a `manifest.json` file with your app configuration:
 ```json
 {
   "name": "Your App Name",
-  "url": "https://github.com/tomp736/your-repo",
+  "url": "https://github.com/labrats-work/your-repo",
   "description": "Your app description",
   "hook_attributes": {
     "url": "https://example.com/webhook"
   },
-  "redirect_url": "https://github.com/tomp736/your-repo",
+  "redirect_url": "https://github.com/labrats-work/your-repo",
   "public": false,
   "default_permissions": {
     "contents": "read",
@@ -52,7 +52,7 @@ This will:
 ## Structure
 
 ```
-my-gh-apps/
+github-app-tools/
 ├── create-app.sh           # Interactive app creation script
 ├── exchange-code.sh        # Standalone credential exchange script
 ├── examples/               # Manifest examples for different use cases
@@ -225,5 +225,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Last Updated:** 2025-12-01
+**Last Updated:** 2025-12-03
 **Status:** Active
+**Organization:** labrats-work

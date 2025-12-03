@@ -1,6 +1,6 @@
-# Contributing to my-gh-apps
+# Contributing to github-app-tools
 
-Thank you for your interest in contributing to the my-gh-apps project! This document provides guidelines for contributing.
+Thank you for your interest in contributing to the github-app-tools project! This document provides guidelines for contributing.
 
 ## How to Contribute
 

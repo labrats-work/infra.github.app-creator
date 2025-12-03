@@ -13,7 +13,7 @@ This repository provides tools and utilities for creating and managing GitHub Ap
 ### Core Components
 
 ```
-my-gh-apps/
+github-app-tools/
 ├── create-app.sh           # Interactive app creation script
 ├── exchange-code.sh        # Standalone credential exchange script
 ├── examples/               # Manifest examples for different use cases
@@ -69,9 +69,9 @@ my-gh-apps/
 ```json
 {
   "name": "Your App Name",
-  "url": "https://github.com/tomp736/your-repo",
+  "url": "https://github.com/labrats-work/your-repo",
   "description": "Your app description",
-  "redirect_url": "https://github.com/tomp736/your-repo",
+  "redirect_url": "https://github.com/labrats-work/your-repo",
   "public": false,
   "default_permissions": {
     "contents": "read",
@@ -262,15 +262,14 @@ When working in this repository:
 
 ## Related Repositories
 
-- **my-repos** - Compliance checking using GitHub Apps
-- Other personal automation repositories
+- **repo-standards** - Repository compliance checking framework that uses GitHub Apps
 
 ## Version History
 
-- **Initial creation:** Basic manifest flow tools
-- **Automation added:** Interactive creation script
-- **Examples added:** Common use case manifests
+- **2025-12-03:** Repository migrated to labrats-work organization with fresh history
+- **2025-12-03:** Renamed from my-gh-apps to github-app-tools
+- **Previous:** Basic manifest flow tools, interactive creation script, example manifests
 
 ## Last Updated
 
-2025-12-01
+2025-12-03

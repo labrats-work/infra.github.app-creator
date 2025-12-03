@@ -1,6 +1,6 @@
 # Documentation
 
-Documentation for my-gh-apps GitHub App creation tools.
+Documentation for github-app-tools GitHub App creation tools.
 
 ## Quick Links
 

@@ -73,25 +73,25 @@
         <div class="step">
             <h3>After Clicking the Button:</h3>
             <p>GitHub will redirect to:</p>
-            <code>https://github.com/tomp736/my-repos?code=XXXXXXXXXXXXXXXX</code>
+            <code>https://github.com/labrats-work/my-repos?code=XXXXXXXXXXXXXXXX</code>
             <p><strong>Copy the code value!</strong></p>
         </div>
 
         <div class="step">
             <h3>Then Run:</h3>
-            <code>cd /home/u0/code/tomp736/my-gh-apps<br>./exchange-code.sh YOUR_CODE_HERE</code>
+            <code>cd /home/u0/code/labrats-work/github-app-tools<br>./exchange-code.sh YOUR_CODE_HERE</code>
         </div>
     </div>
 
     <script>
         const manifest = {
             "name": "My-Repos Compliance Checker",
-            "url": "https://github.com/tomp736/my-repos",
+            "url": "https://github.com/labrats-work/my-repos",
             "description": "Automated compliance checking for all my-* repositories. Clones repos, runs checks, generates reports, and creates issues for critical failures.",
             "hook_attributes": {
                 "url": "https://example.com/webhook"
             },
-            "redirect_url": "https://github.com/tomp736/my-repos",
+            "redirect_url": "https://github.com/labrats-work/my-repos",
             "public": false,
             "default_permissions": {
                 "contents": "read",

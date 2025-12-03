@@ -1,8 +1,8 @@
-site_name: my-gh-apps
+site_name: github-app-tools
 site_description: GitHub App creation and management tools
-site_author: tomp736
-repo_url: https://github.com/tomp736/my-gh-apps
-repo_name: tomp736/my-gh-apps
+site_author: labrats-work
+repo_url: https://github.com/labrats-work/github-app-tools
+repo_name: labrats-work/github-app-tools
 
 theme:
   name: material
@@ -45,4 +45,4 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/tomp736
+      link: https://github.com/labrats-work
