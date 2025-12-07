@@ -4,14 +4,16 @@
 set -e
 
 MANIFEST_FILE="${1}"
+ORG_NAME="${2}"
 
 if [ -z "$MANIFEST_FILE" ]; then
     echo "Error: Manifest file is required"
     echo ""
-    echo "Usage: $0 MANIFEST_FILE"
+    echo "Usage: $0 MANIFEST_FILE [ORG_NAME]"
     echo ""
     echo "Example:"
-    echo "  $0 manifest.json"
+    echo "  $0 manifest.json                    # Create user-level app"
+    echo "  $0 manifest.json labrats-work       # Create org-level app"
     echo ""
     echo "See examples/ directory for sample manifests"
     exit 1
@@ -30,6 +32,15 @@ fi
 
 APP_NAME=$(jq -r '.name' "$MANIFEST_FILE")
 
+# Determine creation URL based on org parameter
+if [ -n "$ORG_NAME" ]; then
+    CREATE_URL="https://github.com/organizations/$ORG_NAME/settings/apps/new"
+    CONTEXT="Organization: $ORG_NAME"
+else
+    CREATE_URL="https://github.com/settings/apps/new"
+    CONTEXT="User-level app"
+fi
+
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "  🤖 Create GitHub App: $APP_NAME"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -43,6 +54,7 @@ echo "  Name:        $(jq -r '.name' "$MANIFEST_FILE")"
 echo "  URL:         $(jq -r '.url' "$MANIFEST_FILE")"
 echo "  Redirect:    $(jq -r '.redirect_url' "$MANIFEST_FILE")"
 echo "  Public:      $(jq -r '.public' "$MANIFEST_FILE")"
+echo "  Context:     $CONTEXT"
 echo ""
 
 # Create HTML file in current directory (so the browser can access it)
@@ -90,7 +102,7 @@ cat > "$TEMP_HTML" <<'EOF'
         <p>Click the button to create your GitHub App.</p>
         <p>After creation, copy the <code>code</code> from the redirect URL.</p>
     </div>
-    <form action="https://github.com/settings/apps/new" method="post">
+    <form action="CREATE_URL_PLACEHOLDER" method="post">
         <input type="hidden" name="manifest" id="manifest">
         <button type="submit">Create GitHub App</button>
     </form>
@@ -101,9 +113,10 @@ cat > "$TEMP_HTML" <<'EOF'
 </html>
 EOF
 
-# Insert manifest JSON into HTML
+# Insert manifest JSON and CREATE_URL into HTML
 MANIFEST_JSON=$(cat "$MANIFEST_FILE" | jq -c .)
 sed -i "s|MANIFEST_JSON_PLACEHOLDER|$MANIFEST_JSON|g" "$TEMP_HTML"
+sed -i "s|CREATE_URL_PLACEHOLDER|$CREATE_URL|g" "$TEMP_HTML"
 
 echo "Opening browser to create GitHub App..."
 echo ""
