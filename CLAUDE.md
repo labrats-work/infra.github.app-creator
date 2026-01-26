@@ -13,7 +13,7 @@ This repository provides tools and utilities for creating and managing GitHub Ap
 ### Core Components
 
 ```
-github-app-tools/
+infra.github.app-creator/
 ├── create-app.sh           # Interactive app creation script
 ├── exchange-code.sh        # Standalone credential exchange script
 ├── examples/               # Manifest examples for different use cases
@@ -267,6 +267,7 @@ When working in this repository:
 ## Version History
 
 - **2025-12-03:** Repository migrated to labrats-work organization with fresh history
+- **2026-01-26:** Renamed from github-app-tools to infra.github.app-creator
 - **2025-12-03:** Renamed from my-gh-apps to github-app-tools
 - **Previous:** Basic manifest flow tools, interactive creation script, example manifests
 

@@ -1,4 +1,4 @@
-# github-app-tools
+# infra.github.app-creator
 
 Tools and utilities for creating and managing GitHub Apps using the manifest flow.
 
@@ -52,7 +52,7 @@ This will:
 ## Structure
 
 ```
-github-app-tools/
+infra.github.app-creator/
 ├── create-app.sh           # Interactive app creation script
 ├── exchange-code.sh        # Standalone credential exchange script
 ├── examples/               # Manifest examples for different use cases
