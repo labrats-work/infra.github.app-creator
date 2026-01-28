@@ -1,0 +1,21 @@
+{
+  "name": "Labrats-Work Code Reviewer",
+  "url": "https://github.com/labrats-work/infra.github.app-creator",
+  "description": "Automated PR review bot for labrats-work repositories. Comments on pull requests, posts status checks, and reviews code changes.",
+  "hook_attributes": {
+    "url": "https://example.com/webhook"
+  },
+  "redirect_url": "https://github.com/labrats-work/infra.github.app-creator",
+  "public": false,
+  "default_permissions": {
+    "contents": "read",
+    "pull_requests": "write",
+    "checks": "write",
+    "metadata": "read"
+  },
+  "default_events": [
+    "pull_request",
+    "pull_request_review",
+    "pull_request_review_comment"
+  ]
+}

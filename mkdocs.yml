@@ -1,8 +1,8 @@
-site_name: github-app-tools
+site_name: infra.github.app-creator
 site_description: GitHub App creation and management tools
 site_author: labrats-work
-repo_url: https://github.com/labrats-work/github-app-tools
-repo_name: labrats-work/github-app-tools
+repo_url: https://github.com/labrats-work/infra.github.app-creator
+repo_name: labrats-work/infra.github.app-creator
 
 theme:
   name: material

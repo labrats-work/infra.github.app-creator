@@ -1,6 +1,6 @@
 {
   "projectInfo": {
-    "name": "github-app-tools",
+    "name": "infra.github.app-creator",
     "description": "GitHub App creation and management tools",
     "type": "automation"
   }

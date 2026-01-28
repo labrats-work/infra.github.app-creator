@@ -1,0 +1,21 @@
+{
+  "name": "Labrats-Work Repo Admin",
+  "url": "https://github.com/labrats-work/infra.github.app-creator",
+  "description": "Repository administration bot for labrats-work. Manages repository settings, enforces branch protection rules, and tracks issues for policy violations.",
+  "hook_attributes": {
+    "url": "https://example.com/webhook"
+  },
+  "redirect_url": "https://github.com/labrats-work/infra.github.app-creator",
+  "public": false,
+  "default_permissions": {
+    "administration": "write",
+    "contents": "read",
+    "issues": "write",
+    "metadata": "read"
+  },
+  "default_events": [
+    "repository",
+    "branch_protection_rule",
+    "issues"
+  ]
+}

@@ -1,6 +1,6 @@
-# Contributing to github-app-tools
+# Contributing to infra.github.app-creator
 
-Thank you for your interest in contributing to the github-app-tools project! This document provides guidelines for contributing.
+Thank you for your interest in contributing to the infra.github.app-creator project! This document provides guidelines for contributing.
 
 ## How to Contribute
 

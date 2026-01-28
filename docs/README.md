@@ -1,6 +1,6 @@
 # Documentation
 
-Documentation for github-app-tools GitHub App creation tools.
+Documentation for infra.github.app-creator GitHub App creation tools.
 
 ## Quick Links
 

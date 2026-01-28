@@ -1,0 +1,23 @@
+{
+  "name": "Labrats-Work CI Automation",
+  "url": "https://github.com/labrats-work/infra.github.app-creator",
+  "description": "CI/CD pipeline bot for labrats-work repositories. Runs checks on pull requests, updates commit statuses, and reads workflow results.",
+  "hook_attributes": {
+    "url": "https://example.com/webhook"
+  },
+  "redirect_url": "https://github.com/labrats-work/infra.github.app-creator",
+  "public": false,
+  "default_permissions": {
+    "contents": "read",
+    "checks": "write",
+    "pull_requests": "write",
+    "actions": "read",
+    "metadata": "read"
+  },
+  "default_events": [
+    "push",
+    "pull_request",
+    "check_run",
+    "check_suite"
+  ]
+}
