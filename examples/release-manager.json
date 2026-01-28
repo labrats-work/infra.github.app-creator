@@ -1,0 +1,21 @@
+{
+  "name": "Labrats-Work Release Manager",
+  "url": "https://github.com/labrats-work/infra.github.app-creator",
+  "description": "Release and deployment automation for labrats-work repositories. Creates releases, manages repository contents, and triggers deployment workflows.",
+  "hook_attributes": {
+    "url": "https://example.com/webhook"
+  },
+  "redirect_url": "https://github.com/labrats-work/infra.github.app-creator",
+  "public": false,
+  "default_permissions": {
+    "contents": "write",
+    "pull_requests": "write",
+    "actions": "write",
+    "metadata": "read"
+  },
+  "default_events": [
+    "push",
+    "pull_request",
+    "release"
+  ]
+}
